@@ -5,7 +5,7 @@ sudo apt-get update
 sudo apt-get install -y nginx
 
 echo "Hello World!" | sudo tee /var/www/html/index.html
-string_for_replacement="server_name _;\n\trewrite ^\/redirect_me https:\/\/dorcas30.tech;"
+string_for_replacement="server_name _;\n\trewrite ^\/redirect_me https:\/\/www.blog.dorcas30.com permanent;"
 sudo sed -i "s/server_name _;/$string_for_replacement/" /etc/nginx/sites-enabled/default
 
 # code to create error page and add a redirect for error 404
