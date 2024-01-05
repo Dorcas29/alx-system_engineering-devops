@@ -5,7 +5,8 @@ sudo apt-get update
 sudo apt-get -y install nginx
 sudo ufw 'Nginx HTTP'
 
-echo "Hello World!" > sudo tee /var/www/html/index.html
+# Create a simple HTML file with "Hello World!"
+echo "<html><head><title>Hello World!</title></head><body>Hello World!</body></html>" | sudo tee /var/www/html/index.html
 
 sudo nginx -t
 
